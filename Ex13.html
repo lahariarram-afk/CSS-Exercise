@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color:aquamarine;
+            transition: all 0.5s;
+        }
+        button:hover {
+            background-color: antiquewhite;
+            transform: scale(1);
+        }
+        @media (max-width:480px){
+            body{
+                background-color: brown;
+            }
+        }
+        .loginform {
+            padding:20px;
+            border:2px solid;
+            opacity:0;
+            animation:formAni 2s ease-in forwards;
+        }
+        @keyframes formAni {
+            0%{
+                opacity:0;
+            }
+            100%{
+                opacity:1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form class="loginform">
+        <label>Username:</label>
+        <input type="text" placeholder="Enter your name"><br>
+        <label>Password:</label>
+        <input type="password" placeholder="Enter your password"><br>
+        <button>Login</button>
+    </form>
+</body>
+</html>
+
+
+

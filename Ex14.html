@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image {
+            background-color: antiquewhite;
+            margin: 20px;
+            padding: 100px 50px;
+        }
+
+        .details {
+            background-color: aquamarine;
+            margin: 20px;
+            padding: 100px 50px;
+        }
+
+        @media (min-width:1024px) {
+            .card {
+                display: flex;
+                flex-direction: row;
+            }
+
+        }
+        @media (max-width:1024px) {
+            .card{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        img {
+            transition: 0.5s;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+        .btn {
+            background-color: blue;
+            transition: all 0.5s;
+            padding:10px;
+            margin:20px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: green;    
+            transform: scale(1.1);
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="card">
+        <div class="image">
+            <h1>Product image</h1>
+            <img src="image2.webp" alt="product">
+        </div>
+        <div class="details">
+            <h2>Product details:</h2><br>
+            <p>Name:Camera</p>
+            <p>Price:1,00,000</p>
+            <button class="btn">Buy</button>
+        </div>
+    </section>
+</body>
+
+</html>
