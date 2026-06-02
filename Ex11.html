@@ -3,20 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercise 11 - Bouncing Text</title>
+
     <style>
-        .display{
-            animation: word 2s infinite;
+        body{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            margin:0;
+            font-family:Arial, sans-serif;
         }
-        @keyframes word {
-            0% {
-                
+
+        .container{
+            display:flex;
+            gap:10px;
+        }
+
+        .container span{
+            font-size:60px;
+            font-weight:bold;
+            animation:bounce 1s infinite alternate;
+        }
+
+        .container span:nth-child(2){
+            animation-delay:0.1s;
+        }
+
+        .container span:nth-child(3){
+            animation-delay:0.2s;
+        }
+
+        .container span:nth-child(4){
+            animation-delay:0.3s;
+        }
+
+        .container span:nth-child(5){
+            animation-delay:0.4s;
+        }
+
+        .container span:nth-child(6){
+            animation-delay:0.5s;
+        }
+
+        .container span:nth-child(7){
+            animation-delay:0.6s;
+        }
+
+        @keyframes bounce{
+            from{
+                transform:translateY(0);
+            }
+            to{
+                transform:translateY(-30px);
             }
         }
     </style>
 </head>
 <body>
-    <h1 class="display">WELCOME</h1>
+
+    <div class="container">
+        <span>W</span>
+        <span>E</span>
+        <span>L</span>
+        <span>C</span>
+        <span>O</span>
+        <span>M</span>
+        <span>E</span>
+    </div>
+
 </body>
 </html>
-
